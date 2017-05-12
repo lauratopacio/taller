@@ -1,0 +1,74 @@
+create table producto(
+    pk_producto smallint not null auto_increment primary key,
+    codigo varchar(15) not null,
+    marca_carro varchar(30) not null,
+    nombre_pieza varchar(40) not null,
+    cantidad smallint not null
+    )
+
+
+
+    create table cliente( pk_cliente smallint not null auto_increment primary key, nombre varchar(50) not null, rfc varchar(20) null, telefono varchar(30) null, ciudad varchar(30) null, direccion varchar(50) null )
+
+
+
+
+    create table proveedor( pk_proveedor smallint not null auto_increment primary key, 
+                       nombre_empresa varchar(50) not null,
+                       persona_contacto varchar(50) null,
+                       rfc varchar(20) null, 
+                       tel_persona varchar(30) not null, 
+                       tel_empresa varchar(20) not null,
+                       ciudad varchar(30) not null,
+                       direccion varchar(50) not null,
+                       cod_postal varchar(6) not null,
+                       correo varchar(30) not null
+                      )
+
+
+   create table compras_proveedor( pk_compras_proveedor smallint not null auto_increment primary key, 
+                       fk_proveedor smallint not null,
+                       fk_producto smallint not null,
+                       cantidad smallint not null,
+                       precio float(2) not null,
+                       total float(2) not null,
+                       fecha_compra date not null,
+                       fecha_factura date not null,
+                       no_factura varchar(15) not null,
+                       foreign key (fk_proveedor) references proveedor(pk_proveedor),
+                       foreign key (fk_producto) references producto(pk_producto)
+                      )
+
+
+                      create table venta( pk_venta smallint not null auto_increment primary key,
+                       fecha_venta date not null,
+                       fk_cliente smallint  not null,
+                       estatus varchar(15) not null,
+                       foreign key (fk_cliente) references cliente(pk_cliente)
+                      )
+
+
+                      create table venta_productos( pk_venta_producto smallint not null auto_increment primary key,
+                      fk_venta smallint not null,
+                       fk_producto smallint  not null,
+                       costo float(2) not null,
+                       foreign key (fk_venta) references venta(pk_venta),
+                       foreign key (fk_producto) references producto(pk_producto)
+                      )
+
+    
+    create table pago_contado(
+    pk_pago smallint auto_increment primary key,
+    fk_venta smallint not null,
+    fecha date,
+    cantidad varchar(100) not null,
+    foreign key (fk_venta) references venta(pk_venta)
+    )
+
+    create table venta_servicio(
+    pk_servicio smallint auto_increment primary key,
+    fk_venta smallint not null,
+    mano_obra varchar (50) not null,
+    costo float(2) not null,
+    foreign key (fk_venta) references venta (pk_venta)
+    )

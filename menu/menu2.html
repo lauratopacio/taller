@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--imagen en la cabecera de la pagina-->
+  <link rel="shortcut icon" href="./imagenes/simbo.png" type="image/png" />
+
+
+    <title>Inicio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../jquery/jquery.js"></script> 
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+   
+    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="../jquery/bootstrap.js"></script>
+<link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+    
+
+<!--ejemplo del diseño 2-->
+
+    </head>
+
+    
+<body>
+
+<style type="text/css">
+
+.ea{
+    color:white;
+    font-size:21px;
+}
+</style>
+    <!--
+    Menu-->
+<a href="../admin/index2.php"><img src="../imagenes/logotipo2.jpg" width='100%'>  </a>
+ 
+    
+    <nav role="navigation" class="navbar navbar-inverse">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><img src="../imagenes/banderas.png" width='60px'></a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+             <ul class="nav navbar-nav">
+                
+                <ul class="nav navbar-nav ">
+                    <li class="dropdown"><a href="../admin/index2.php" class="dropdown-toggle" data-toggle="dropdown"><h4><span class="glyphicon glyphicon-home"> </h4></a>
+                        
+                    </li>
+                </ul>
+  <ul class="nav navbar-nav ">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><h4><span class="glyphicon glyphicon-user"> Clientes <b class="caret"></b></h4></a>
+                        <ul class="dropdown-menu">
+                            <li><a class='ea' href="../cliente/mostrar-cliente.php"><span class="glyphicon glyphicon-plus-sign">  Añadir/Ver</a></li>
+                        
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav ">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><h4><span class="glyphicon glyphicon-list-alt"> Productos <b class="caret"></b></h4></a>
+                        <ul class="dropdown-menu">
+                            <li><a class='ea' href="../productos/productos.php"><span class="glyphicon glyphicon-plus">  Añadir/Ver</a></li>
+                        
+                        </ul>
+                    </li>
+                </ul>
+    <ul class="nav navbar-nav ">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><h4><span class="glyphicon glyphicon-list-alt"> Proveedores <b class="caret"></b></h4></a>
+                        <ul class="dropdown-menu">
+                            <li><a class='ea' href="../proveedores/mostrar-proveedor.php"><span class="glyphicon glyphicon-plus">  Añadir/Ver</a></li>
+                        
+                        </ul>
+                    </li>
+                </ul>
+        <ul class="nav navbar-nav ">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><h4><span class="glyphicon glyphicon-star"> Ventas<b class="caret"></b></h4></a>
+                        <ul class="dropdown-menu">
+                                <li><a class='ea' href="../venta/ver_venta.php"><span class="glyphicon glyphicon-eye-open"> Ver</a></li>
+                                <li><a class='ea' href="../cliente/mostrar-cliente.php"><span class="glyphicon glyphicon-plus"> Crear Ventas</a></li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><h4><span class="glyphicon glyphicon-folder-open"> Deudas <b class="caret"></b></h4></a>
+                        <ul class="dropdown-menu">
+                                <li><a class='ea' href="../deudas/ver_deudas.php"><span class="glyphicon glyphicon-eye-open"> Ver</a></li>
+                        
+                            
+                    
+                            
+                        </ul>
+                    </li>
+                </ul>
+               <ul class="nav navbar-nav ">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><h4><span class="glyphicon glyphicon-user"> Control <b class="caret"></b></h4></a>
+                        <ul class="dropdown-menu">
+                               <li><a class='ea' href="../graficas/mostrar_grafica1.php"><span class="glyphicon glyphicon-bookmark"> Productos m&aacutes vendidos</a>
+
+                                </li>
+                                  <li><a class='ea' href="../graficas/mostrar_clientes_frecuentes.php"><span class="glyphicon glyphicon-user"> Clientes frecuentes</a></li>
+                    <li><a class='ea' href="../graficas/mostrar_grafica3.php"><span class="glyphicon glyphicon-book"> Ventas efectivo/cheque</a></li>
+                    <li><a class='ea' href="../surtir/stock_bajo.php"><span class="glyphicon glyphicon-th-list"> Inventario a surtir </a></li>
+                                            
+                    
+                            
+                        </ul>
+                    </li>
+                </ul>
+
+              <ul class="nav navbar-nav">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><h4><span  class="glyphicon glyphicon-cog"> Configuraciones <b class="caret"></b></h4></a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a href="../admin/form_adm.php"><span class="glyphicon glyphicon-user"> Alta administradores</a></li>
+                            <li><a href="../admin/mostrar-administrador.php"><span class="glyphicon glyphicon-eye-open"> Ver administradores</a></li>
+                            <li><a href="../admin/cambiar_clave.php"><span class="glyphicon glyphicon-lock"> Cambiar contraseña</a></li>
+                            <li><a href="../config/cerrar.php"><span class="glyphicon glyphicon-log-out"> Cerrar sesion</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+
+          
+        </div>
+    </nav>
+
+            
+            </body></html>
